@@ -4,7 +4,6 @@ $(window).ready(function() {
 });
 
 
-
 $("#new-quote-button").on('click', function() {
     console.log("Button Pressed");
 
@@ -15,9 +14,11 @@ $("#new-quote-button").on('click', function() {
             let link    = "";
             let title   = "";
             let content = "";
+
+            console.log(json);
             
             link    = "<a href=" + json[0].link + "></a";
-            title   = "<h1>" + json[0].title + "</h1>";
+            title   = "<p>" + json[0].title + "</p>";
             content = json[0].content; 
             html    = html + title + content;
 
