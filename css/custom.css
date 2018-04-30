@@ -2,13 +2,15 @@
 
 /* Classes */
 .message-container {
-	color: black;
-
+    color: black;
+    padding: 10px;
+    background-color: grey;
 }
 
 .message {
-	height: auto;
-	padding: 50px;
+    height: auto;
+    padding: 50px;
+    overflow: auto;
 }
 
 .message-bottom {
@@ -16,18 +18,18 @@
 }
 
 .message-bottom a {
-	float: right;
+    float: right;
 }
 
-.message-bottom button {
-	float: right;
+.message-bottom span {
+    float:  right;
 }
 
 .container {
-	margin: 20%;
+    margin: 20%;
 }
 
 /* ID Selectors*/
 #name {
-	float: right;
+    float: right;
 }
