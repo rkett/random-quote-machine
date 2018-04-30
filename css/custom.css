@@ -1,60 +1,35 @@
 /* Custom CSS */
-/* Delete most of this */
 
-body {
-	
-}
-
-p {
-	font-size: 4vw;
-}
-
-@media screen and (max-width: 425px) {
-		.container {
-		margin: 5%;
-	}
-}
-
-
-@media screen and (min-width: 426px) {
-		.container {
-		margin: 20%;
-	}
-}
-
-
-.plate {
-	border-width: 20px;
-	border-style: solid;
-	border-color: black;
-	box-shadow: 0px 2px 800px #828589;
-	min-height: 300px;
-	min-width: 300px;
+/* Classes */
+.message-container {
+    color: black;
+    padding: 10px;
+    background-color: grey;
 }
 
 .message {
-	margin: 5%;
-	color:white;
+    height: auto;
+    padding: 50px;
+    overflow: auto;
 }
 
-/* non-responsive */
-.border-t1 {
-	border-style: solid;
-	border-color: white;
-	border-width: 50px;
-	min-width: 200px;
-	min-height: 200px;
-	position: absolute;
-	box-shadow: 0px 2px 20px black;
+.message-bottom {
+
 }
 
-.border-t2 {
-	border-style: solid;
-	border-color: black;
-	border-width: 25px;
-	min-width: 250px;
-	min-height: 250px;
-	margin: -38px;
-	position: relative;
-	box-shadow: 0px 2px 20px black, inset 0 0 100px white;
-	background-color: #383634;
+.message-bottom a {
+    float: right;
+}
+
+.message-bottom span {
+    float:  right;
+}
+
+.container {
+    margin: 20%;
+}
+
+/* ID Selectors*/
+#name {
+    float: right;
+}

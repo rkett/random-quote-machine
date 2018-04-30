@@ -11,18 +11,23 @@
         <link rel="stylesheet" type="text/css" href="css/custom.css">
 
         <!-- Hotlinked CSS -->
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     </head>
     <!--Start of Body-->
     <body>
 
-
+        <!-- Going to Re-factor all of this using CSS grids and flexbox design -->
         <div class="container">
-            <div class="border-t1">
-                <div class="border-t2">
+            <div class="message-container">
+                <div class="message"></div>
+                <div class="message-bottom">
+                    <span id="new-quote-button" class="fas fa-random" role="button" aria-label="generate new quote"></span>
                 </div>
+                <div style="clear: both"></div>
             </div>
         </div>
+
+
         <!-- Hotlinked JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
