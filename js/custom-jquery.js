@@ -14,7 +14,7 @@ $("#new-quote-button").on('click', function() {
 
 function randomQuote() {
     return (
-        $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[post_per_page]=1", function() {
+        $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[post_per_page]=1", function() {
             // Get response.
         })
         .done(function(response, textStatus) {
@@ -28,7 +28,7 @@ function randomQuote() {
             name         = "<p id='name'>" + response[0].title + "</p>";
             content      = response[0].content;
             html         = html + content + name;
-            
+
             $(".message").css('opacity', '0');
             $(".message").html(html)
             $(".message").animate({
