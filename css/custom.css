@@ -1,8 +1,33 @@
 /* Custom CSS */
-/* Delete most of this */
 
+/* Classes */
+.message-container {
+	color: black;
+
+}
 
 .message {
-	margin: 5%;
-	color: black;
+	height: auto;
+	padding: 50px;
+}
+
+.message-bottom {
+
+}
+
+.message-bottom a {
+	float: right;
+}
+
+.message-bottom button {
+	float: right;
+}
+
+.container {
+	margin: 20%;
+}
+
+/* ID Selectors*/
+#name {
+	float: right;
 }
