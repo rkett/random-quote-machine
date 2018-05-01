@@ -1,20 +1,20 @@
-$(window).ready(function() {
+/*
+    File: functions.js
+    Author: Ross Kett
+    Data Modified: 04/30/2018
+    Usage: Place any custom made functions in this document.
+ */
 
-    // Window is ready.
-    console.log("Window is ready."); // XXX
-    randomQuote();
-});
-
-$("#new-quote-button").on('click', function() {
-
-    // Button is clicked.
-    console.log("Button Pressed"); // XXX
-    randomQuote();
-});
-
+/*
+    Function: randomQuote()
+    Intent: To obtain a random quote from quotesondesign and then insert said quote into the users view.
+    return: [object] -- $.getJSON function, callback to .done() or .fail() with .always(). If it succeeds, sideffect
+                        of return inserts HTML into CSS class ".message". Else, the function failed. Always will fire 
+                        no matter circumstances. 
+ */
 function randomQuote() {
     return (
-        $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[post_per_page]=1", function() {
+        $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[post_per_page]=1", function() {
             // Get response.
         })
         .done(function(response, textStatus) {
@@ -53,4 +53,3 @@ function randomQuote() {
         })
     );
 }
-
