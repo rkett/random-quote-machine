@@ -29,11 +29,11 @@ function randomQuote() {
             content      = response[0].content;
             html         = html + content + name;
 
-            $(".message").css('opacity', '0');
-            $(".message").html(html)
-            $(".message").animate({
+            //$(".message").css('opacity', '0');
+            $(".message-body").html(html)
+            /*$(".message").animate({
                 opacity: "1"
-            }, 1400);
+            }, 1400);*/
 
             // On success of request.
             console.log("Successful attempt to obtain a single random quote from quotesondesign API.");
