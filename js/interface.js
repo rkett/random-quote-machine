@@ -15,7 +15,7 @@ $(function() {
 
     randomQuote(); // First call of randomQuote().
 
-    $("#new-quote-button").on('click', function() {
+    $("#button-random").on('click', function() {
         randomQuote();
     }); // Invokes randomQuote() whenever button is clicked.
 });

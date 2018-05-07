@@ -17,18 +17,28 @@ function randomQuote() {
             // Get response.
         })
         .done(function(response, textStatus) {
-            let html         = "";
-            let link         = "";
-            let name         = "";
-            let content      = "";
-            let height       = 0;
-            let width        = 0;
+            let html           = "";
+            let link           = "";
+            let name           = "";
+            let content        = "";
+            let twitter_button = "";
+            let height         = 0;
+            let width          = 0;
 
-            name         = "<p id='name'> -- " + response[0].title + "</p>";
-            content      = response[0].content;
-            html         = html + content + name;
+            name           = "<p id='name'> -- " + response[0].title + "</p>";
+            content        = response[0].content;
+            html           = html + content + name;
+            link           = link + response[0].link;
+
+            // Needs refactor; Usage: cuts the <p> & </p> tags out of content by casting content to an array.
+            twitter_content = "'" + response[0].content.slice(3,response[0].content.slice().length-6) + "'" + " -- " + response[0].title + " " + link;
+
+            if (twitter_content.length >= 144){
+                twitter_content = link;
+            } // Else Twitter will auto-truncate the message.
+
             $(".message-body").html(html)
-
+            $("#button-twitter").replaceWith('<div id="button-twitter" role="button"> <a class="fab fa-twitter fa-2x" href="https://twitter.com/intent/tweet?text=' + twitter_content + '"></a></div>');
             // On success of request.
         })
         .fail(function(response, textStatus, errorThrown) {
