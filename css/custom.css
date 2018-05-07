@@ -11,7 +11,6 @@
         justify-content: flex-end;
         align-items: center;
     }
-
     .message-footer {
         display: flex;
         flex-direction: row;
@@ -76,39 +75,6 @@
     background-color: #d88500;
     transition: background-color 1s;
 }
-
-/* These need to be handled by JS in order to complete
-The animation while the active state is no longer true.
-
-@keyframes rotateButton {
-    0% {
-        transform: rotate(72deg);
-    }
-
-    25% {
-        transform: rotate(144deg);
-    }
-
-    50% {
-        transform: rotate(216deg);
-    }
-
-    75% {
-        transform: rotate(288deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-#button-random p:active {
-    animation-name: rotateButton;
-    animation-duration: 0.25s;
-    animation-timing-function: linear;
-}
-*/ 
-
 
 #button-twitter {
     background-color: #1DA1F2;

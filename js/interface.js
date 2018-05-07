@@ -1,7 +1,6 @@
 /*
     File: interface.js
     Author: Ross Kett
-    Data Modified: 04/30/2018
     Usage: Place any event listeners or event-like listeners inside this document.
  */
 
