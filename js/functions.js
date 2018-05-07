@@ -13,7 +13,7 @@
  */
 function randomQuote() {
     return (
-        $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[post_per_page]=1", function() {
+        $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[post_per_page]=1", function() {
             // Get response.
         })
         .done(function(response, textStatus) {
@@ -30,20 +30,14 @@ function randomQuote() {
             $(".message-body").html(html)
 
             // On success of request.
-            console.log("Successful attempt to obtain a single random quote from quotesondesign API.");
-            console.log("Text Status: " + textStatus); // XXX
         })
         .fail(function(response, textStatus, errorThrown) {
 
             // On fail of request.
-            console.log("Failure to obtain a single random quote from quotesondesign API.");
-            console.log("Text Status: " + textStatus + " " + "HTTP Error Thrown: " + errorThrown); // XXX
         })
         .always(function(response, textStatus) {
 
             // On completion of whole request.
-            console.log("Completed attempt to obtain a single random quote from quotesondesign API.");
-            console.log("Text Status: " + textStatus); // XXX
         })
     );
 }
