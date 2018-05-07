@@ -1,0 +1,83 @@
+/* 
+    File: grids.css
+    Author: Ross Kett;
+    Usage: Alignment and layout of page.;
+*/
+
+/* 
+    Classes 
+*/
+.center-container {
+    display: grid;
+    grid-template-areas: "center-container";
+    justify-items: center;
+    margin-top: 15%;
+}
+
+.message-container {
+    display: grid;
+    grid-area:center-container;
+    grid-template-rows: 1fr;
+    grid-row-gap: 5px;
+    grid-template-areas:
+    "image"
+    "content"
+    "footer";
+    min-width: 600px;
+    max-width: 600px;
+}
+
+/* Small Screens */
+@media (max-width: 600px) {
+    .message-footer {
+        display: grid;
+        grid-area: footer;
+        grid-template-columns: 1fr;
+        grid-row-gap: 4px;
+        grid-template-areas:
+        "button-one"
+        "button-two";
+    }
+}
+
+/* All Other Screens */
+@media (min-width: 600px) {
+    .message-footer {
+        display: grid;
+        grid-area: footer;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4px;
+        grid-template-areas:
+        "button-one button-two";
+    }
+}
+
+.message-body {
+    display: grid;
+    grid-area: content;
+    justify-self: center;
+    align-self: center;
+    text-align: justify;
+    padding: 20px;
+}
+
+/* 
+    ID Selectors
+*/
+#name {
+    justify-self: end;
+}
+
+#button-twitter {
+    display: grid;
+    grid-area: button-one;
+    justify-items: center;
+    padding: 5px;
+}
+
+#button-random {
+    display: grid;
+    grid-area: button-two;
+    justify-items: center;
+    padding: 5px;
+}

@@ -1,7 +1,6 @@
 /*
     File: functions.js
     Author: Ross Kett
-    Data Modified: 04/30/2018
     Usage: Place any custom made functions in this document.
  */
 
@@ -25,15 +24,10 @@ function randomQuote() {
             let height       = 0;
             let width        = 0;
 
-            name         = "<p id='name'>" + response[0].title + "</p>";
+            name         = "<p id='name'> -- " + response[0].title + "</p>";
             content      = response[0].content;
             html         = html + content + name;
-
-            //$(".message").css('opacity', '0');
             $(".message-body").html(html)
-            /*$(".message").animate({
-                opacity: "1"
-            }, 1400);*/
 
             // On success of request.
             console.log("Successful attempt to obtain a single random quote from quotesondesign API.");
