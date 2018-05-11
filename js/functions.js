@@ -9,7 +9,8 @@
     Intent: To obtain a random quote from quotesondesign and then insert said quote into the users view.
     return: [object] -- $.getJSON function, callback to .done() or .fail() with .always(). If it succeeds, sideffect
                         of return inserts HTML into CSS class ".message". Else, the function failed. Always will fire 
-                        no matter circumstances. 
+                        no matter circumstances. This function also auto-populates a twitter post 
+                        (for use with twitter-button).
  */
 function randomQuote() {
     return (
@@ -22,31 +23,26 @@ function randomQuote() {
             let name           = "";
             let content        = "";
             let twitter_button = "";
-            let height         = 0;
-            let width          = 0;
 
-            name           = "<p id='name'> -- " + response[0].title + "</p>";
-            content        = response[0].content;
-            html           = html + content + name;
-            link           = link + response[0].link;
-
-            // Needs refactor; Usage: cuts the <p> & </p> tags out of content by casting content to an array.
+            name            = "<p id='name'> -- " + response[0].title + "</p>";
+            content         = response[0].content;
+            html            = html + content + name;
+            link            = link + response[0].link;
             twitter_content = "'" + response[0].content.slice(3,response[0].content.slice().length-6) + "'" + " -- " + response[0].title + " " + link;
 
+            // Twitter has a max character length of 144.
             if (twitter_content.length >= 144){
                 twitter_content = link;
-            } // Else Twitter will auto-truncate the message.
+            } 
 
             $(".message-body").html(html)
             $("#button-twitter").replaceWith('<div id="button-twitter" role="button"> <a class="fab fa-twitter fa-2x" href="https://twitter.com/intent/tweet?text=' + twitter_content + '"></a></div>');
             // On success of request.
         })
         .fail(function(response, textStatus, errorThrown) {
-
             // On fail of request.
         })
         .always(function(response, textStatus) {
-
             // On completion of whole request.
         })
     );
